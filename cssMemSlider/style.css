@@ -48,6 +48,7 @@ input[name="point"]{
   height: auto;
   margin: 0 auto;
   display: flex;
+  user-select: none;
 }
 
 .slider-text{
@@ -59,9 +60,9 @@ input[name="point"]{
 
 .text{
   min-width: 100%;
-  color: #ddd;
+  color: #fff;
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-size: 2rem;
+  font-size: 1.8rem;
   transition: .3s;
 }
 
@@ -153,4 +154,38 @@ input[name="point"]{
 
 #slide5:checked ~.slider-text .text:first-child{
   margin-left: -400%;
+}
+
+
+@media screen and (min-width: 768px) and (max-width:1279px){
+  .control-btn{
+    width: 0.8rem;
+    height: 0.8rem;
+  }
+  .text{
+    font-size: 1.35rem;
+  }
+}
+
+@media screen and (max-width: 767px){
+  .slider{
+    width: 80%;
+    margin: 0 1rem;
+    grid-template-areas: 
+                "A A A"
+                "B B B"
+                "D D D"
+                "C C C";
+  }
+
+  .slider-controls{
+    justify-content: center;
+  }
+  .control-btn{
+    width: 0.7rem;
+    height: 0.7rem;
+  }
+  .text{
+    font-size: 1.2rem;
+  }
 }
