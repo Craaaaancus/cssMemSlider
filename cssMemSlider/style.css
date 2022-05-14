@@ -13,14 +13,66 @@ body {
 }
 
 input[name="point"]{
-  position: absolute;
+  grid-area: A;
   visibility: hidden;
 }
 
 .slider{
   display: grid;
-  max-width: 80rem;
+  width: 70%;
+  margin: 0 2rem;
+  overflow:hidden;
+  grid-template-areas: 
+      "A A A"
+      "B B B"
+      "C C D";
+  
+}
 
+.slider-images{
+  display: flex;
+  justify-content: space-around;
+  background-color: #fff;
+  width: 500%;
+  grid-area: B;
+}
+
+.img-block{
+  width: 100%;
+}
+
+.slider-img{
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+}
+
+.slider-text{
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  grid-area: C;
+}
+
+.text{
+  min-width: 100%;
+  color: #ddd;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 2rem;
+}
+
+.slider-controls{
+  display: flex;
+  justify-content: flex-end;
+
+  grid-area: D;
+}
+
+.control{
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
 }
 /*
 
