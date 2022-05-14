@@ -32,7 +32,6 @@ input[name="point"]{
 .slider-images{
   display: flex;
   justify-content: space-around;
-  background-color: #fff;
   width: 500%;
   margin-bottom: 2rem;
   grid-area: B;
@@ -41,12 +40,15 @@ input[name="point"]{
 
 .img-block{
   width: 100%;
+  background-color: #fff;
+  border-radius: 1rem;
 }
 
 .slider-img{
   max-width: 100%;
   height: auto;
   margin: 0 auto;
+  border-radius: 1rem;
   display: flex;
   user-select: none;
 }
@@ -165,6 +167,9 @@ input[name="point"]{
   .text{
     font-size: 1.35rem;
   }
+  .img-block{
+    border-radius: 0.5rem;
+  }
 }
 
 @media screen and (max-width: 767px){
@@ -187,5 +192,11 @@ input[name="point"]{
   }
   .text{
     font-size: 1.2rem;
+  }
+  .slider-img{
+    border-radius: 0.3rem;
+  }
+  .img-block{
+    border-radius: 0.3rem;
   }
 }
